@@ -14,5 +14,13 @@ print("6. Checkout")
 print("7. Exit")
 
 print("="*28)
-choice = input("Enter your choice: ")
+
+choice = ""
+
+while True:
+    choice = input("Enter your choice: ")
+    if choice == "7":
+        print("Exiting...")
+        break
+
 print()
