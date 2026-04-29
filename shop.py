@@ -1,23 +1,3 @@
-# Menu - START
-print()
-print("="*28)
-
-print("       ISMAIL'S SHOP")
-
-print("="*28)
-
-print("1. View Products")
-print("2. Add Item to Cart")
-print("3. View Cart")
-print("4. Remove Item from Cart")
-print("5. Apply Discount Code")
-print("6. Checkout")
-print("7. Exit")
-
-print("="*28)
-
-# Menu - END
-
 choice = ""
 products = {
     "1":{
@@ -53,10 +33,39 @@ products = {
 }
 
 while True:
+    print()
+    print("="*28)
+
+    print("       ISMAIL'S SHOP")
+
+    print("="*28)
+
+    print("1. View Products")
+    print("2. Add Item to Cart")
+    print("3. View Cart")
+    print("4. Remove Item from Cart")
+    print("5. Apply Discount Code")
+    print("6. Checkout")
+    print("7. Exit")
+
+    print("="*28)
+
     choice = input("Enter your choice: ")
     if choice.strip() == "7":
-        print("Exiting...")
+        print("Goodbye!")
         break
+    elif choice.strip() == "1":
+        print("View Products - coming soon")
+    elif choice.strip() == "2":
+        print("Add Item to Cart - coming soon")
+    elif choice.strip() == "3":
+        print("View Cart - coming soon")
+    elif choice.strip() == "4":
+        print("Remove Item from Cart - coming soon")
+    elif choice.strip() == "5":
+        print("Apply Discount Code - coming soon")
+    elif choice.strip() == "6":
+        print("Checkout - coming soon")
     else:
-        print("Invalid choice, try again!")
+        print("Invalid choice. Please enter 1 - 7")
 print()
