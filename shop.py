@@ -33,6 +33,7 @@ products = {
 }
 
 while True:
+    # menu start
     print()
     print("="*28)
 
@@ -50,12 +51,21 @@ while True:
 
     print("="*28)
 
+    #menu end
+
     choice = input("Enter your choice: ")
     if choice.strip() == "7":
         print("Goodbye!")
         break
     elif choice.strip() == "1":
         print("View Products - coming soon")
+        #✅ TODO: Store at least 6 products in a dictionary with name, price, and stock quantity - DONE, stored 6 products in products dictionary
+        #TODO: Displaying products
+        #TODO: show a numbered list
+        #TODO: prices formatted to 2 decimal places
+        #TODO: stock status — show `"Out of Stock"` if quantity is 0
+
+
     elif choice.strip() == "2":
         print("Add Item to Cart - coming soon")
     elif choice.strip() == "3":
