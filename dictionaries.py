@@ -34,6 +34,7 @@ cars = {
 
 print()
 for index, (outer_key, inner_dict) in enumerate(cars.items()):
+    print(f"Price: {inner_dict['price']:.2f}" if inner_dict["quantity"] else "No price")
     print(f"{index + 1}. {outer_key}")
     for inner_key, value in inner_dict.items():
         if ((inner_key != "quantity") & (inner_key != "price")):
