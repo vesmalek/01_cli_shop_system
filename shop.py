@@ -65,11 +65,13 @@ while True:
         print()
 
         for outer_key, inner_dict in products.items():
-            price = (f"; Price: ${inner_dict['Price']:.2f}; " if inner_dict['Quantity'] else "")
+            name = inner_dict['Name']
 
-            quantity = (f"Quantity: {inner_dict['Quantity']}" if inner_dict['Quantity'] else " [Out of Stock]")
+            price = (f"Price: ${inner_dict['Price']:.2f}" if inner_dict['Quantity'] else "N/A")
 
-            print(f"{outer_key}. {inner_dict['Name']}{price}{quantity}")
+            quantity = (f"Quantity: {inner_dict['Quantity']}" if inner_dict['Quantity'] else "[Out of Stock]")
+
+            print(f"{outer_key}. {name:<22}{price:<18}{quantity}")
 
             print()
 
