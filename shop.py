@@ -77,6 +77,11 @@ while True:
 
     elif choice.strip() == "2":
         print("Add Item to Cart - coming soon")
+        print()
+        print("~"*28)
+        print("ADD ITEM TO CART")
+        print("~"*28)
+        print()
     elif choice.strip() == "3":
         print("View Cart - coming soon")
     elif choice.strip() == "4":
