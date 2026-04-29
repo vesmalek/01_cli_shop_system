@@ -19,7 +19,7 @@ choice = ""
 
 while True:
     choice = input("Enter your choice: ")
-    if choice == "7":
+    if choice.strip() == "7":
         print("Exiting...")
         break
 
