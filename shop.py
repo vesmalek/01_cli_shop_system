@@ -29,7 +29,7 @@ products = {
         "Name": "Toothpaste 50g",
         "Price": 2.45,
         "Quantity": 42
-    },
+    }
 }
 
 while True:
@@ -58,12 +58,31 @@ while True:
         print("Goodbye!")
         break
     elif choice.strip() == "1":
-        print("View Products - coming soon")
-        #✅ TODO: Store at least 6 products in a dictionary with name, price, and stock quantity - DONE, stored 6 products in products dictionary
-        #TODO: Displaying products
-        #TODO: show a numbered list
-        #TODO: prices formatted to 2 decimal places
-        #TODO: stock status — show `"Out of Stock"` if quantity is 0
+        print()
+        print("="*28)
+        print("VIEW PRODUCTS")
+        print("="*28)
+        print()
+        #✅ TODO: Store at least 6 products in a dictionary with name, price, and stock quantity
+        #✅ TODO: Displaying products
+
+        for outer_key, inner_dict in products.items():
+            print(f"{outer_key}", end=". ")
+            for inner_key, value in inner_dict.items():
+                if ((inner_key != "Quantity") & (inner_key != "Price")):
+                    print(f"{value}", end="; ")
+                if (inner_key == "Quantity"):
+                    if (not value):
+                        print("[Out of Stock]")
+                    else:
+                        print(f"Quantity in Stock: {value}")
+                if (inner_key == "Price"):
+                    if(inner_dict["Quantity"]):
+                        print(f"{inner_key}: {value:.2f}", end="; ")
+            print()
+        #✅ TODO: show a numbered list
+        #✅ TODO: prices formatted to 2 decimal places
+        #✅ TODO: stock status — show `"Out of Stock"` if quantity is 0
 
 
     elif choice.strip() == "2":
