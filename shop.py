@@ -65,12 +65,12 @@ while True:
         print()
 
         for outer_key, inner_dict in products.items():
-            price = (f"; Price: {inner_dict["Price"]:.2f}; " if inner_dict["Quantity"] else "")
+            price = (f"; Price: {inner_dict['Price']:.2f}; " if inner_dict['Quantity'] else "")
 
-            quantity = (f"Quantity: {inner_dict["Quantity"]}" if inner_dict["Quantity"] else "; [Out of Stock]")
+            quantity = (f"Quantity: {inner_dict['Quantity']}" if inner_dict['Quantity'] else " [Out of Stock]")
 
-            print(f"{outer_key}. {inner_dict["Name"]}{price}{quantity}")
-            
+            print(f"{outer_key}. {inner_dict['Name']}{price}{quantity}")
+
             print()
 
     elif choice.strip() == "2":
