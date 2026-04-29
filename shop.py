@@ -59,9 +59,9 @@ while True:
         break
     elif choice.strip() == "1":
         print()
-        print("="*28)
+        print("~"*28)
         print("VIEW PRODUCTS")
-        print("="*28)
+        print("~"*28)
         print()
 
         for outer_key, inner_dict in products.items():

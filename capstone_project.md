@@ -27,9 +27,9 @@ Enter your choice:
 
 ### Full Feature Requirements
 
-**Product Catalogue**
-- Store at least 6 products in a dictionary with name, price, and stock quantity
-- Displaying products should show a numbered list with prices formatted to 2 decimal places and stock status — show `"Out of Stock"` if quantity is 0
+**✅ Product Catalogue**
+- ✅ Store at least 6 products in a dictionary with name, price, and stock quantity
+- ✅ Displaying products should show a numbered list with prices formatted to 2 decimal places and stock status — show `"Out of Stock"` if quantity is 0
 
 **Add to Cart**
 - User enters a product number to add
