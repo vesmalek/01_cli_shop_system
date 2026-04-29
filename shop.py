@@ -1,3 +1,4 @@
+# Menu - START
 print()
 print("="*28)
 
@@ -15,12 +16,47 @@ print("7. Exit")
 
 print("="*28)
 
+# Menu - END
+
 choice = ""
+products = {
+    "1":{
+        "Name": "iPhone 17 Pro Max",
+        "Price": 1950,
+        "Quantity": 3
+    },
+    "2":{
+        "Name": "Notebook",
+        "Price": 4.99,
+        "Quantity": 12
+    },
+    "3":{
+        "Name": "Adidas Running Shoe",
+        "Price": 55,
+        "Quantity": 7
+    },
+    "4":{
+        "Name": "Avocadoes (1kg)",
+        "Price": 7.50,
+        "Quantity": 0
+    },
+    "5":{
+        "Name": "5L Shower Gel",
+        "Price": 33.50,
+        "Quantity": 24
+    },
+    "6":{
+        "Name": "Toothpaste 50g",
+        "Price": 2.45,
+        "Quantity": 42
+    },
+}
 
 while True:
     choice = input("Enter your choice: ")
     if choice.strip() == "7":
         print("Exiting...")
         break
-
+    else:
+        print("Invalid choice, try again!")
 print()
