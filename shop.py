@@ -63,27 +63,15 @@ while True:
         print("VIEW PRODUCTS")
         print("="*28)
         print()
-        #✅ TODO: Store at least 6 products in a dictionary with name, price, and stock quantity
-        #✅ TODO: Displaying products
 
         for outer_key, inner_dict in products.items():
-            print(f"{outer_key}", end=". ")
-            for inner_key, value in inner_dict.items():
-                if ((inner_key != "Quantity") & (inner_key != "Price")):
-                    print(f"{value}", end="; ")
-                if (inner_key == "Quantity"):
-                    if (not value):
-                        print("[Out of Stock]")
-                    else:
-                        print(f"Quantity in Stock: {value}")
-                if (inner_key == "Price"):
-                    if(inner_dict["Quantity"]):
-                        print(f"{inner_key}: {value:.2f}", end="; ")
-            print()
-        #✅ TODO: show a numbered list
-        #✅ TODO: prices formatted to 2 decimal places
-        #✅ TODO: stock status — show `"Out of Stock"` if quantity is 0
+            price = (f"; Price: {inner_dict["Price"]:.2f}; " if inner_dict["Quantity"] else "")
 
+            quantity = (f"Quantity: {inner_dict["Quantity"]}" if inner_dict["Quantity"] else "; [Out of Stock]")
+
+            print(f"{outer_key}. {inner_dict["Name"]}{price}{quantity}")
+            
+            print()
 
     elif choice.strip() == "2":
         print("Add Item to Cart - coming soon")
