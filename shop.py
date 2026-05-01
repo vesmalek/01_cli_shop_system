@@ -72,16 +72,27 @@ while True:
             quantity = (f"Quantity: {inner_dict['Quantity']}" if inner_dict['Quantity'] else "[Out of Stock]")
 
             print(f"{outer_key}. {name:<22}{price:<18}{quantity}")
-
-            print()
-
     elif choice.strip() == "2":
-        print("Add Item to Cart - coming soon")
         print()
         print("~"*28)
         print("ADD ITEM TO CART")
         print("~"*28)
         print()
+
+        cart_items = []
+
+        while True:
+            item = input("Enter product number to add item to cart: ")
+            cart_items.append(item)
+            wanna_continue = input("Wanna add more items? Press 1 for YES, any other key for NO ")
+            
+            if wanna_continue.strip() == "1":
+                continue
+            else:
+                print("Exiting...")
+                break
+            
+        print(cart_items)
     elif choice.strip() == "3":
         print("View Cart - coming soon")
     elif choice.strip() == "4":
