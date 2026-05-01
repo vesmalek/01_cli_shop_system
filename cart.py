@@ -35,10 +35,27 @@ products = {
 
 print("Shopping Street")
 
-selected_item = input("Enter products number to add it to cart: ")
+first_selected_item = input("Enter the first products number to add it to cart: ")
+
+second_selected_item = input("Enter the second products number to add it to cart: ")
+
+third_selected_item = input("Enter the third products number to add it to cart: ")
+
 
 cart_items = {}
 
-cart_items.update(products[selected_item])
+cart_items[first_selected_item] = products[first_selected_item]
 
-print(f"{cart_items[selected_item]}")
+selected_items = [first_selected_item, second_selected_item, third_selected_item]
+
+for item in selected_items:
+    if item in cart_items:
+        cart_items[item]["quantity"] += 1
+    else:
+        cart_items[item] = {
+            "name": products[item]["name"],
+            "price": products[item]["price"],
+            "quantity": 1
+        }
+
+print(f"{cart_items}")
